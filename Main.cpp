@@ -295,9 +295,9 @@ void menu(MaterialBibliografico* biblioteca[], Usuario* usuarios[]) {
         cout << "    2. Mostrar información de la biblioteca\n" << endl;
         cout << "    3. Prestar material\n" << endl;
         cout << "    4. Devolver material\n" << endl;
-        cout << "    5. Gestión de usuario" <<;
-        cout << "    6. Volver atrás" << ;
-        cout << "Seleccione una opción: " << ;
+        cout << "    5. Gestión de usuario" << endl;
+        cout << "    6. Volver atrás" << endl;
+        cout << "Seleccione una opción: " << endl;
         cin >> opcion;
 
         switch (opcion) {
