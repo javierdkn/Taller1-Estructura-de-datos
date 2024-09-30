@@ -84,10 +84,10 @@ void agregarRevista(MaterialBibliografico* biblioteca[]) {
 void agregarMaterial(MaterialBibliografico* biblioteca[]){
     int opcion = 0;
     do {
-        cout << "    Que tipo de material es:";
-        cout << "    1. Libro";
-        cout << "    2. Revista";
-        cout << "    3. Salir";  
+        cout << "    Que tipo de material es:\n";
+        cout << "    1. Libro\n";
+        cout << "    2. Revista\n";
+        cout << "    3. Salir\n";  
         cout << "Seleccione una opción: ";
         cin >> opcion;
 
@@ -267,9 +267,9 @@ void eliminarUsuario(Usuario* usuarios[]) {
 void gestionUsuario(Usuario* usuarios[]){
     int opcion = 0;
     do {
-        cout << "Ingrese el ID del usuario: ";
-        cout<<"    1. Agregar nuevo usuario";
-        cout<<"    2. Eliminar usuario";
+        cout << "Ingrese el ID del usuario: \n";
+        cout<<"    1. Agregar nuevo usuario\n";
+        cout<<"    2. Eliminar usuario\n";
         cout<<"Seleccione una opción: ";
         cin>>opcion;
         switch(opcion) {
@@ -292,12 +292,12 @@ void gestionUsuario(Usuario* usuarios[]){
 void menu(MaterialBibliografico* biblioteca[], Usuario* usuarios[]) {
     int opcion = 0;
     do {
-        cout << "    1. Agregar Material a la biblioteca";
-        cout << "    2. Mostrar información de la biblioteca";
-        cout << "    3. Prestar material";
-        cout << "    4. Devolver material";
-        cout << "    5. Gestión de usuario";
-        cout << "    6. Volver atrás";
+        cout << "    1. Agregar Material a la biblioteca\n";
+        cout << "    2. Mostrar información de la biblioteca\n";
+        cout << "    3. Prestar material\n";
+        cout << "    4. Devolver material\n";
+        cout << "    5. Gestión de usuario\n";
+        cout << "    6. Volver atrás\n";
         cout << "Seleccione una opción: ";
         cin >> opcion;
 
