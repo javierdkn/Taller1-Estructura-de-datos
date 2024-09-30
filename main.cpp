@@ -267,9 +267,10 @@ void eliminarUsuario(Usuario* usuarios[]) {
 void gestionUsuario(Usuario* usuarios[]){
     int opcion = 0;
     do {
-        cout<<"    1. Agregar nuevo usuario\n"<<endl;
-        cout<<"    2. Eliminar usuario\n"<<endl;
-        cout<<"Seleccione una opción: "<<endl;
+        cout << "Ingrese el ID del usuario: ";
+        cout<<"    1. Agregar nuevo usuario";
+        cout<<"    2. Eliminar usuario";
+        cout<<"Seleccione una opción: ";
         cin>>opcion;
         switch(opcion) {
             case 1:
@@ -291,13 +292,13 @@ void gestionUsuario(Usuario* usuarios[]){
 void menu(MaterialBibliografico* biblioteca[], Usuario* usuarios[]) {
     int opcion = 0;
     do {
-        cout << "    1. Agregar Material a la biblioteca\n" << endl;
-        cout << "    2. Mostrar información de la biblioteca\n" << endl;
-        cout << "    3. Prestar material\n" << endl;
-        cout << "    4. Devolver material\n" << endl;
-        cout << "    5. Gestión de usuario" << endl;
-        cout << "    6. Volver atrás" << endl;
-        cout << "Seleccione una opción: " << endl;
+        cout << "    1. Agregar Material a la biblioteca";
+        cout << "    2. Mostrar información de la biblioteca";
+        cout << "    3. Prestar material";
+        cout << "    4. Devolver material";
+        cout << "    5. Gestión de usuario";
+        cout << "    6. Volver atrás";
+        cout << "Seleccione una opción: ";
         cin >> opcion;
 
         switch (opcion) {
