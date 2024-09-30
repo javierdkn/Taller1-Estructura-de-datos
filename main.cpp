@@ -84,10 +84,10 @@ void agregarRevista(MaterialBibliografico* biblioteca[]) {
 void agregarMaterial(MaterialBibliografico* biblioteca[]){
     int opcion = 0;
     do {
-        cout << "    Que tipo de material es:\n" << endl;
-        cout << "    1. Libro\n" << endl;
-        cout << "    2. Revista\n" << endl;
-        cout << "    3. Salir\n" << endl;  
+        cout << "    Que tipo de material es:";
+        cout << "    1. Libro";
+        cout << "    2. Revista";
+        cout << "    3. Salir";  
         cout << "Seleccione una opción: ";
         cin >> opcion;
 
