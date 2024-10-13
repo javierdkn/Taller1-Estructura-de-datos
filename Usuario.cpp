@@ -24,6 +24,7 @@ bool Usuario::prestarMaterial(MaterialBibliografico* material) {
     for (int i = 0; i < 5; ++i) {
         if (materialesPrestados[i] == nullptr) {
             materialesPrestados[i] = material;
+            material->setPrestado(true);
             return true;
         }
     }
@@ -35,6 +36,7 @@ bool Usuario::devolverMaterial(MaterialBibliografico* material) {
     for (int i = 0; i < 5; ++i) {
         if (materialesPrestados[i] == material) {
             materialesPrestados[i] = nullptr;
+            material->setPrestado(false);
             return true;
         }
     }
