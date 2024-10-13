@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <string>
 #include "MaterialBibliografico.h"
 #include "Libro.h"
 #include "Revista.h"
@@ -330,6 +331,7 @@ void menu(MaterialBibliografico* biblioteca[], Usuario* usuarios[]) {
 
 
 int main() {
+    
     MaterialBibliografico* biblioteca[100] = {nullptr};
     Usuario* usuarios[50] = {nullptr};;
     menu(biblioteca, usuarios);
