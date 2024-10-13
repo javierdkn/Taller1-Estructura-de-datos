@@ -14,7 +14,7 @@ string Libro::getResumen() {
 }
 
 void Libro::mostrarInformacion() {
-     cout << "-------------------------------\n";
+    cout << "-------------------------------\n";
     cout << "Nombre: " << nombre << endl;
     cout << "ISBN: " << isbn << endl;
     cout << "Autor: " << autor << endl;;
