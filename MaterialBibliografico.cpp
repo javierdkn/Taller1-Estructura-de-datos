@@ -32,6 +32,6 @@ MaterialBibliografico::~MaterialBibliografico(){}
 void MaterialBibliografico::mostrarInformacion(){
     cout << "nombre: " << nombre << endl;
     cout << "isbn: " << isbn << endl;
-    cout << "prestado: " << (prestado ? "Sí" : "No") << endl;
+    cout << "prestado: " << (prestado ? "Si" : "No") << endl;
 
 }
