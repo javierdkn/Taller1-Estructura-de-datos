@@ -15,9 +15,12 @@ string Revista::getMesPublicacion() {
 }
 
 void Revista::mostrarInformacion() {
-    MaterialBibliografico::mostrarInformacion();  
-    cout << "EL numero de edicion: " << numeroEdicion << endl;
-    cout << "El mes publicacion: " << mesPublicacion << endl;
+    cout << "-------------------------------\n";
+    cout << "Nombre: " << nombre << endl;
+    cout << "ISBN: " << isbn << endl;
+    cout << "Autor: " << autor << endl;;
+    cout << "Prestado: " << (prestado ? "Sí" : "No") << endl;
+
 }
 
 Revista::~Revista() {}
