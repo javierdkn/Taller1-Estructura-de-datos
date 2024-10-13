@@ -292,6 +292,7 @@ void gestionUsuario(Usuario* usuarios[]){
 void menu(MaterialBibliografico* biblioteca[], Usuario* usuarios[]) {
     int opcion = 0;
     do {
+        cout << "--------------------------------------------------";
         cout << "    1. Agregar Material a la biblioteca\n";
         cout << "    2. Mostrar información de la biblioteca\n";
         cout << "    3. Prestar material\n";
