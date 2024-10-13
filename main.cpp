@@ -31,12 +31,12 @@ void agregarLibro(MaterialBibliografico* biblioteca[]) {
     for (int i = 0; i < 100; ++i) {
         if (biblioteca[i] == nullptr) {
             biblioteca[i] = nuevoLibro;
-            cout << "Libro agregado con éxito en la posición " << i << "." << endl;
+            cout << "Libro agregado con exito en la posicion " << i << "." << endl;
             return;
         }
     }
 
-    cout << "No hay espacio disponible en la biblioteca para agregar más libros." << endl;
+    cout << "No hay espacio disponible en la biblioteca para agregar mas libros." << endl;
 }
 
 void agregarRevista(MaterialBibliografico* biblioteca[]) {
@@ -66,14 +66,13 @@ void agregarRevista(MaterialBibliografico* biblioteca[]) {
     
     for (int i = 0; i < 100; ++i) {
         if (biblioteca[i] == nullptr) {
-            biblioteca[i] = nuevaRevista;  
-            cout << "Revista agregado con éxito en la posición " << i << "." << endl;
+            biblioteca[i] = nuevaRevista;
+            cout << "Revista agregada con exito en la posicion " << i << "." << endl;
             return;
         }
     }
 
-    
-    cout << "No hay espacio disponible en la biblioteca para agregar más revista." << endl;
+    cout << "No hay espacio disponible en la biblioteca para agregar mas revistas." << endl;
 }
 
 void agregarMaterial(MaterialBibliografico* biblioteca[]){
@@ -83,7 +82,7 @@ void agregarMaterial(MaterialBibliografico* biblioteca[]){
         cout << "    1. Libro\n";
         cout << "    2. Revista\n";
         cout << "    3. Salir\n";  
-        cout << "Seleccione una opción: ";
+        cout << "Seleccione una opcion: ";
         cin >> opcion;
 
         switch (opcion) {
@@ -97,8 +96,8 @@ void agregarMaterial(MaterialBibliografico* biblioteca[]){
                 cout << "Saliendo..." << endl;
                 break;
             default:
-                cout << "Opción incorrecta, por favor ingrese una opción válida" << endl;
-                cin.clear();  // Limpia el estado de error
+                cout << "Opcion incorrecta, por favor ingrese una opcion valida" << endl;
+                cin.clear();
                 break;
         }
     } while (opcion != 3);
@@ -112,6 +111,7 @@ void mostrarMaterial(MaterialBibliografico* biblioteca[]) {
             biblioteca[i]->mostrarInformacion();  
         }
     }
+    
 }
 
 
@@ -262,9 +262,10 @@ void eliminarUsuario(Usuario* usuarios[]) {
 void gestionUsuario(Usuario* usuarios[]){
     int opcion = 0;
     do {
-        cout << "Ingrese el ID del usuario: \n";
+        cout<<"    Gestion de usuario: \n";
         cout<<"    1. Agregar nuevo usuario\n";
         cout<<"    2. Eliminar usuario\n";
+        cout<<"    3. Salir\n";
         cout<<"Seleccione una opción: ";
         cin>>opcion;
         switch(opcion) {
@@ -274,12 +275,15 @@ void gestionUsuario(Usuario* usuarios[]){
             case 2:
                 eliminarUsuario(usuarios);
                 break;
-             default:
+            case 3:
+            cout << "Saliendo..." << endl;
+                break;
+            default:
                 cout<<"Opción incorrecta, por favor ingrese una opción válida"<<"\n"<<endl;
                 cin.clear();
                 cin.ignore();
         }
-    } while(opcion != 6);
+    } while(opcion != 3);
 
 }
 
@@ -289,12 +293,12 @@ void menu(MaterialBibliografico* biblioteca[], Usuario* usuarios[]) {
     do {
         cout << "--------------------------------------------------\n";
         cout << "    1. Agregar Material a la biblioteca\n";
-        cout << "    2. Mostrar información de la biblioteca\n";
+        cout << "    2. Mostrar informacion de la biblioteca\n";
         cout << "    3. Prestar material\n";
         cout << "    4. Devolver material\n";
         cout << "    5. Gestión de usuario\n";
-        cout << "    6. Volver atrás\n";
-        cout << "Seleccione una opción: ";
+        cout << "    6. Volver atras\n";
+        cout << "Seleccione una opcion: ";
         cin >> opcion;
 
         switch (opcion) {
@@ -317,7 +321,7 @@ void menu(MaterialBibliografico* biblioteca[], Usuario* usuarios[]) {
                 cout << "Volviendo..." << endl;
                 break;
             default:
-                cout << "Opción incorrecta, por favor ingrese una opción válida" << endl;
+                cout << "Opción incorrecta, por favor ingrese una opcion valida" << endl;
                 cin.clear();
                 cin.ignore();
         }
@@ -326,8 +330,8 @@ void menu(MaterialBibliografico* biblioteca[], Usuario* usuarios[]) {
 
 
 int main() {
-    MaterialBibliografico* biblioteca[100];
-    Usuario* usuarios[50];
+    MaterialBibliografico* biblioteca[100] = {nullptr};
+    Usuario* usuarios[50] = {nullptr};;
     menu(biblioteca, usuarios);
     return 0;
 }
