@@ -12,7 +12,9 @@
 void agregarLibro(MaterialBibliografico* biblioteca[]) {
     string nombre, isbn, autor, fechaPublicacion, resumen;
 
+    cout << "--------------------------------------------------\n";
     cout << "Ingrese el nombre del libro: ";
+    cin.ignore();  
     getline(cin, nombre);
 
     cout << "Ingrese el ISBN del libro: ";
@@ -21,7 +23,7 @@ void agregarLibro(MaterialBibliografico* biblioteca[]) {
     cout << "Ingrese el autor del libro: ";
     getline(cin, autor);
 
-    cout << "Ingrese la fecha de publicación del libro: ";
+    cout << "Ingrese la fecha de publicacion del libro: ";
     getline(cin, fechaPublicacion);
 
     cout << "Ingrese el resumen del libro: ";
@@ -44,6 +46,7 @@ void agregarRevista(MaterialBibliografico* biblioteca[]) {
     string nombre, isbn, autor, mesPublicacion;
     int numeroEdicion;
 
+    cout << "--------------------------------------------------\n";
     cout << "Ingrese el nombre de la revista: ";
     cin.ignore();  
     getline(cin, nombre);
@@ -143,6 +146,7 @@ void prestar(MaterialBibliografico* biblioteca[], Usuario* usuarios[]) {
     string inputTitulo;
     int inputId;
 
+    cout << "--------------------------------------------------\n";
     cout << "Ingrese el nombre del material que desea prestar: ";
     cin.ignore();
     getline(cin, inputTitulo);
@@ -159,7 +163,7 @@ void prestar(MaterialBibliografico* biblioteca[], Usuario* usuarios[]) {
 
     
     if (m->getPrestado()) {
-        cout << "El material ya está prestado." << endl;
+        cout << "El material ya esta prestado." << endl;
         return;
     }
 
@@ -174,7 +178,7 @@ void prestar(MaterialBibliografico* biblioteca[], Usuario* usuarios[]) {
     if (u->prestarMaterial(m)) {
         cout << "Material prestado exitosamente." << endl;
     } else {
-        cout << "El usuario ya ha alcanzado el límite de materiales prestados." << endl;
+        cout << "El usuario ya ha alcanzado el limite de materiales prestados." << endl;
     }
 }
 
@@ -182,6 +186,7 @@ void devolver(MaterialBibliografico* biblioteca[], Usuario* usuarios[]) {
     string inputTitulo;
     int inputId;
 
+    cout << "--------------------------------------------------\n";
     cout << "Ingrese el nombre del material que desea devolver: ";
     cin.ignore();
     getline(cin, inputTitulo);
@@ -196,7 +201,7 @@ void devolver(MaterialBibliografico* biblioteca[], Usuario* usuarios[]) {
     }
 
     if (!m->getPrestado()) {
-        cout << "El material no está prestado actualmente." << endl;
+        cout << "El material no esta prestado actualmente." << endl;
         return;
     }
 
@@ -263,11 +268,12 @@ void eliminarUsuario(Usuario* usuarios[]) {
 void gestionUsuario(Usuario* usuarios[]){
     int opcion = 0;
     do {
+        cout << "--------------------------------------------------\n";
         cout<<"    Gestion de usuario: \n";
         cout<<"    1. Agregar nuevo usuario\n";
         cout<<"    2. Eliminar usuario\n";
         cout<<"    3. Salir\n";
-        cout<<"Seleccione una opción: ";
+        cout<<"Seleccione una opcion: ";
         cin>>opcion;
         switch(opcion) {
             case 1:
@@ -280,7 +286,7 @@ void gestionUsuario(Usuario* usuarios[]){
             cout << "Saliendo..." << endl;
                 break;
             default:
-                cout<<"Opción incorrecta, por favor ingrese una opción válida"<<"\n"<<endl;
+                cout<<"Opcion incorrecta, por favor ingrese una opcion valida"<<"\n"<<endl;
                 cin.clear();
                 cin.ignore();
         }
@@ -297,7 +303,7 @@ void menu(MaterialBibliografico* biblioteca[], Usuario* usuarios[]) {
         cout << "    2. Mostrar informacion de la biblioteca\n";
         cout << "    3. Prestar material\n";
         cout << "    4. Devolver material\n";
-        cout << "    5. Gestión de usuario\n";
+        cout << "    5. Gestion de usuario\n";
         cout << "    6. Volver atras\n";
         cout << "Seleccione una opcion: ";
         cin >> opcion;
@@ -331,7 +337,7 @@ void menu(MaterialBibliografico* biblioteca[], Usuario* usuarios[]) {
 
 
 int main() {
-    
+
     MaterialBibliografico* biblioteca[100] = {nullptr};
     Usuario* usuarios[50] = {nullptr};;
     menu(biblioteca, usuarios);
