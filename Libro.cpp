@@ -14,9 +14,11 @@ string Libro::getResumen() {
 }
 
 void Libro::mostrarInformacion() {
-    MaterialBibliografico::mostrarInformacion();  
-    cout << "fechaPublicacion: " << fechaPublicacion << endl;
-    cout << "resumen: " << resumen << endl;
+     cout << "-------------------------------\n";
+    cout << "Nombre: " << nombre << endl;
+    cout << "ISBN: " << isbn << endl;
+    cout << "Autor: " << autor << endl;;
+    cout << "Prestado: " << (prestado ? "Sí" : "No") << endl;
 }
 
 Libro::~Libro() {}
