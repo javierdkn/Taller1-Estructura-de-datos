@@ -4,7 +4,7 @@
 using namespace std;
 
 class MaterialBibliografico{
-    private:
+    protected:
 
         string nombre;
         string isbn;
@@ -18,7 +18,6 @@ class MaterialBibliografico{
         string getAutor();
         bool getPrestado();
         void setPrestado(bool estado);
-
         ~MaterialBibliografico();
-        virtual void mostrarInformacion();
+        virtual void mostrarInformacion() = 0;
 };
