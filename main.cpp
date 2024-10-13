@@ -11,36 +11,31 @@
 void agregarLibro(MaterialBibliografico* biblioteca[]) {
     string nombre, isbn, autor, fechaPublicacion, resumen;
 
-    
     cout << "Ingrese el nombre del libro: ";
-    cin.ignore();  
     getline(cin, nombre);
 
-    cout << "Ingrese el isbn del libro: ";
+    cout << "Ingrese el ISBN del libro: ";
     getline(cin, isbn);
 
-    cout << "Ingrese la autor del libro: ";
+    cout << "Ingrese el autor del libro: ";
     getline(cin, autor);
 
-    cout << "Ingrese el fecha de publicaion del libro: ";
+    cout << "Ingrese la fecha de publicación del libro: ";
     getline(cin, fechaPublicacion);
 
-    cout << "Ingrese el resumen  del libro: ";
+    cout << "Ingrese el resumen del libro: ";
     getline(cin, resumen);
 
-    
     MaterialBibliografico* nuevoLibro = new Libro(nombre, isbn, autor, fechaPublicacion, resumen);
 
-    
     for (int i = 0; i < 100; ++i) {
         if (biblioteca[i] == nullptr) {
-            biblioteca[i] = nuevoLibro;  
+            biblioteca[i] = nuevoLibro;
             cout << "Libro agregado con éxito en la posición " << i << "." << endl;
             return;
         }
     }
 
-    
     cout << "No hay espacio disponible en la biblioteca para agregar más libros." << endl;
 }
 
@@ -292,7 +287,7 @@ void gestionUsuario(Usuario* usuarios[]){
 void menu(MaterialBibliografico* biblioteca[], Usuario* usuarios[]) {
     int opcion = 0;
     do {
-        cout << "--------------------------------------------------";
+        cout << "--------------------------------------------------\n";
         cout << "    1. Agregar Material a la biblioteca\n";
         cout << "    2. Mostrar información de la biblioteca\n";
         cout << "    3. Prestar material\n";
